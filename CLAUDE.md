@@ -35,7 +35,7 @@
 
 - 保存先フォルダ ID: Routine のプロンプトで指定された値を使用する
 - ファイル名: `claude-daily-YYYY-MM-DD.html`（実行日の日付）
-- Drive MCP のアップロード上限（約 200KB）のため HTML 形式で保存する
+- HTML テキストを `text_content` フィールドで渡す（base64 経由は MCP のペイロード上限に引っかかるため）
 - PDF 変換が必要な場合は `html_to_pdf.js` を使用するが、現状は HTML で代替
 
 ## Slack 通知
