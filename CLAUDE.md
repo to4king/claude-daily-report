@@ -33,12 +33,14 @@
 
 ## Google Drive 保存
 
+- 保存先フォルダ ID: Routine のプロンプトで指定された値を使用する
 - ファイル名: `claude-daily-YYYY-MM-DD.html`（実行日の日付）
 - Drive MCP のアップロード上限（約 200KB）のため HTML 形式で保存する
 - PDF 変換が必要な場合は `html_to_pdf.js` を使用するが、現状は HTML で代替
 
 ## Slack 通知
 
+- 投稿先チャンネル: Routine のプロンプトで指定された値を使用する
 - 形式:
   ```
   📋 Claude日次レポート(YYYY-MM-DD)
