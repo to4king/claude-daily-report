@@ -31,21 +31,17 @@
 各 Tips は「仕組み・コマンド例・使い場面・注意点」の構成で 10 行規模に詳述する。
 毎日同じ内容にならないよう、一般的でない・実務的なものを優先する。
 
-## Google Drive 保存
-
-- 保存先フォルダ ID: Routine のプロンプトで指定された値を使用する
-- ファイル名: `claude-daily-YYYY-MM-DD.html`（実行日の日付）
-- HTML テキストを `text_content` フィールドで渡す（base64 経由は MCP のペイロード上限に引っかかるため）
-- PDF 変換が必要な場合は `html_to_pdf.js` を使用するが、現状は HTML で代替
-
-## Slack 通知
+## Slack Canvas 作成
 
 - 投稿先チャンネル: Routine のプロンプトで指定された値を使用する
-- 形式:
+- レポート本文を Markdown 形式で Slack Canvas として作成する
+- Canvas タイトル: `Claude日次レポート YYYY-MM-DD`
+- Canvas 作成後、チャンネルへ Canvas へのリンクを含む通知メッセージを投稿する
+- 通知メッセージの形式:
   ```
   📋 Claude日次レポート(YYYY-MM-DD)
   （本文の3行要約）
-  （Drive ファイルへのリンク）
+  （Canvas へのリンク）
   ```
 - 区切り線（`---`）は使わない（Slack で表示エラーになるため）
 
